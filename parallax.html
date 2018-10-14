@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>parallax</title>
+	<style type="text/css">
+		html{
+			box-sizing: border-box;
+			overflow: hidden;
+		}
+		*,*::before,*::after{
+			box-sizing: inherit;
+		}
+		body{
+			height: 100vh;
+			margin: 0px;
+			overflow-y: auto;
+			overflow-x: hidden;
+			-webkit-overflow-scrolling:tuch;
+
+
+			-webkit-perspecive:1px;
+			perspective: 1px;
+		}
+		img{
+			display: block;
+			width: 100%;
+			opacity: 0.8;
+		}
+
+		.parallax-group{
+			-webkit-transform-style:preserve-3d;
+			transform-style: preserve-3d;
+		}
+		.back{
+			-webkit-transform:  translateZ(-1px) scale(2);
+			transform:  translateZ(-1px) scale(2);
+			position: relative;
+			top: calc(((100vh - 0.256vw) / 4) * -2);
+		}
+		.front{
+			background: #ccc;
+			padding: 14em 1em;
+			position:relative;
+			z-index: 2;
+		}
+		h2{
+			-webkit-transform:  translateZ(-0.5px) scale(1.5);
+			transform:  translateZ(-0.5px) scale(1.5);
+			position: absolute;
+			top: 10em;
+			width: 100%;
+			text-align: center;
+			color:#fff;
+		}
+	</style>
+</head>
+<body>
+<div class="parallax-group">
+	<img src="../image/spman.jpg" class="back" alt="">
+	<h2>Akash!</h2>
+	<header class="front">
+		<h1>parallax</h1>
+	</header>
+</div>
+</body>
+</html>
